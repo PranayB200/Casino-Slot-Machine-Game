@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PB GAMES</title>
+    <script async defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <!-- Intro Section Start -->
+        <section id="hero">
+            <div class="container">
+                <h1>SLOT MACHINE GAME</h1>
+                <h2>Test Your Luck!</h2>
+                <h3>Select The Level and Click on Start</h3>
+                <h3>Level (1-6):
+                    <input type="number" min="1" max="6" id="inpLevel" placeholder="Enter Level"></input>
+                </h3>
+                <a href="#game" class="btnStart scrollto">Start</a>
+            </div>
+        </section>
+        <!-- Intro Section End -->
+
+        <section id="game">
+        
+            <div class="machine">
+                <div class="slot" id="slot1">
+                    <div class="value" id="value1">1</div>
+                </div>
+                <div class="slot" id="slot2">
+                    <div class="value" id="value2">2</div>
+                </div>
+                <div class="slot" id="slot3">
+                    <div class="value" id="value3">3</div>
+                </div>
+            </div>
+            <h3> Speed Control(1-10):
+                <input type="number" min="1" max="10" id="inpSpeed" placeholder="Enter Speed"></input>
+            </h3>
+            <h1 id="divOutput"></h3>
+        </section>
+    </center>
+</body>
+</html>

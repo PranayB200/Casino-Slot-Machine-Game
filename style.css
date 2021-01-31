@@ -1,0 +1,172 @@
+
+/* CSS root-var */
+:root {
+    --speed: 5;
+    --slot_spin_move_limit: 200;
+}
+
+body {
+    background-color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+/* HERO section Starts */
+#hero {
+    width: 100%;
+    height: 80vh;
+    background: url("hero-bg.jpg") center center;
+    background-size: cover;
+    position: relative;
+}
+
+#hero .container {
+    padding-top: 150px;
+}
+
+#hero:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#hero h1 {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+}
+
+#hero h2 {
+    color: #eee;
+    margin-bottom: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+#hero h3 {
+    color: #eee;
+    margin-top: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.btnStart {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px;
+    border: 2px solid #fff;
+    color: #fff;
+}
+  
+.btnStart:hover {
+    background: #009970;
+    border: 2px solid #009970;
+}
+
+#hero ::placeholder {
+    color: white;
+}
+/* HERO section ends */
+
+.machine {
+    background-color:dimgray;
+    border: dashed black 3px;
+    height: 300px;
+    width: 900px;
+    margin: 50px;
+
+
+    display: flex;
+}
+
+.slot {
+    height: 250px;
+    width: 250px;
+    margin: 20px;
+
+    background-color:lavender;
+    border: solid rgb(17, 17, 71) 2px;
+    overflow: hidden;
+
+    text-align: center;
+    font-size: 100px;
+    line-height: 250px;
+}
+
+.slot .value {
+    animation-name: slotspin;
+    animation-iteration-count: infinite;
+    animation-duration: calc(1s / var(--speed));
+}
+@keyframes slotspin {
+    0% {
+        transform: translateY(calc(-1px * var(--slot_spin_move_limit)));
+    }
+    100% {
+        transform: translateY(calc(1px * var(--slot_spin_move_limit)));
+    }
+}
+
+#inpSpeed {
+    font-size: 15px;
+    width: 100px;
+}
+
+#inpLevel {
+    font-size: 15px;
+    width: 95px;
+    background: transparent;
+    color: white
+}
+
+
+/* GAME Section STarts */
+#game {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+#game h1 {
+    margin: 0 0 10px 0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 200px;
+    color: #fff;
+}
+
+#game h3 {
+    color: #eee;
+    margin-top: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+#game ::placeholder {
+    color: black
+}
+/* GAME Section Ends */
